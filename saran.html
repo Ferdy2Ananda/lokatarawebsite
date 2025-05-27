@@ -202,7 +202,8 @@
       keluhan: document.getElementById("complaint").value,
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbxSNaYgCQHaanf9hxceVLhs8OfacPgPTUJs1rBe4pmkcbYiAi4nIztkRA9KMx7ZXS73/exec", {
+    // GANTI URL DI SINI DENGAN URL WEB APP ANDA YANG BARU
+    fetch("https://script.google.com/macros/s/AKfycbwYj8QcInQCtu68ypzwbs1irwXqMSk_vnf9KHO0Q2UjKPZbHdu1kWOwl3SV7mrOLxx0/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -211,7 +212,8 @@
     })
     .then(res => res.json())
     .then(response => {
-      alert("Saran berhasil dikirim. Terima kasih!");
+      // Perbarui pesan alert berdasarkan respons dari Apps Script
+      alert(response.message || "Saran berhasil dikirim. Terima kasih!");
       document.getElementById("saranForm").reset();
     })
     .catch(error => {
