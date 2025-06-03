@@ -180,36 +180,6 @@
       </svg>
     </div>
 
-    <script>
-        // Jalankan kode setelah DOM sepenuhnya dimuat
-        document.addEventListener('DOMContentLoaded', function() {
-            const notification = document.getElementById('notification');
-            const form = document.getElementById('saran'); // Gunakan ID form Anda
-            
-            // Dapatkan URL saat ini
-            const urlParams = new URLSearchParams(window.location.search);
-
-            // Cek apakah ada parameter 'submit=true'
-            if (urlParams.has('submit') && urlParams.get('submit') === 'true') {
-                // Tampilkan pesan sukses
-                notification.textContent = 'Pesan Anda berhasil terkirim! Terima kasih atas kritik dan saran Anda.';
-                notification.classList.add('success');
-                notification.style.display = 'block';
-
-                // Opsional: Sembunyikan form setelah sukses
-                // form.style.display = 'none'; // Aktifkan ini jika Anda ingin form hilang setelah sukses
-                // Atau, reset form
-                form.reset();
-
-                // Hapus parameter dari URL agar tidak muncul lagi saat di-refresh
-                window.history.replaceState({}, document.title, window.location.pathname);
-            }
-            // Untuk pesan gagal, Netlify tidak menyediakan parameter URL khusus.
-            // Kegagalan biasanya terjadi jika form tidak terkirim sama sekali (misal, masalah koneksi, atau JS memblokir native submission).
-            // Anda harus mengandalkan pemeriksaan di Netlify dashboard untuk melihat apakah submission masuk.
-        });
-    </script>
-
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -222,11 +192,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
 
     </body>
