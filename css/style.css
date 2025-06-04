@@ -62,8 +62,13 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
-
+  background-color: #fff;
+}
+.bg-overlay {
+    background-color: rgba(0, 0, 0, 0.9); /* Ini adalah warna latar belakang form */
+    border-radius: 1rem;
+    padding: 2rem;
+}
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
@@ -226,7 +231,8 @@ button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+-webkit-appearance: button; 
+appearance: none;}
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -245,7 +251,8 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  -webkit-appearance: listbox; }
+-webkit-appearance: listbox; 
+appearance: none;}
 
 textarea {
   overflow: auto;
@@ -276,8 +283,10 @@ progress {
   height: auto; }
 
 [type="search"] {
-  outline-offset: -2px;
-  -webkit-appearance: none; }
+outline-offset: -2px;
+-webkit-appearance: none; 
+appearance: none;
+}
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
@@ -4338,10 +4347,11 @@ input[type="button"].btn-block {
     cursor: pointer; }
 
 button.close {
-  padding: 0;
-  background-color: transparent;
-  border: 0;
-  -webkit-appearance: none; }
+padding: 0;
+background-color: transparent;
+border: 0;
+-webkit-appearance: none; 
+appearance: none;}
 
 .modal-open {
   overflow: hidden; }
@@ -7960,18 +7970,23 @@ h1, h2, h3, h4, h5,
       font-size: 16px; }
 
 .menu-entry {
-  margin-bottom: 30px; }
-  .menu-entry .img {
-    display: block;
-    height: 200px; }
-  .menu-entry .text h3 {
-    font-size: 18px;
-    text-transform: uppercase; }
-    .menu-entry .text h3 a {
-      color: #fff; }
-  .menu-entry .text .price span {
-    color: #fff;
-    font-size: 18px; }
+  margin-bottom: 30px;
+}
+.menu-entry.img {
+  display: block;
+  height: 200px;
+}
+.menu-entry .text h3 {
+  font-size: 18px;
+  text-transform: uppercase; 
+}
+.menu-entry .text h3 a {
+  color: #fff;
+}
+.menu-entry .text .price span {
+  color: #fff;
+  font-size: 18px;
+}
 
 .product-details h3 {
   text-transform: uppercase;
@@ -8744,6 +8759,7 @@ textarea.form-control {
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
