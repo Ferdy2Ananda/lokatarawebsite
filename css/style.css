@@ -8885,43 +8885,41 @@ textarea.form-control {
         margin-bottom: 5px; } }
 
 .block-20 {
-  overflow: hidden;
+  height: 250px;
+  width: 100%;            /* Tambahkan ini */
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
-  position: relative;
   display: block;
+  border-radius: 8px;
+}
+.blog-entry.fixed-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
   width: 100%;
-  height: 270px; }
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.blog-entry .text {
+  min-height: 80px;
+  padding: 1rem;
+}
 
-.blog-entry {
-  overflow: hidden; }
-  @media (min-width: 768px) {
-    .blog-entry {
-      margin-bottom: 30px; } }
-  @media (max-width: 767.98px) {
-    .blog-entry {
-      margin-bottom: 30px; } }
-  .blog-entry .text {
-    position: relative; }
-    .blog-entry .text .heading {
-      font-size: 18px;
-      margin-bottom: 16px;
-      font-weight: 400; }
-      .blog-entry .text .heading a {
-        color: #fff; }
-        .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
-          color: #c49b63; }
-  .blog-entry .meta > div {
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 0;
-    font-size: 14px; }
-    .blog-entry .meta > div a {
-      color: gray;
-      font-size: 15px; }
-      .blog-entry .meta > div a:hover {
-        color: #666666; }
+@media (min-width: 768px) {
+  .blog-entry {
+    margin-bottom: 30px; } }
+
+@media (max-width: 767.98px) {
+  .blog-entry {
+    margin-bottom: 30px; } }
+
+.blog-entry .meta > div {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 0;
+  font-size: 14px; }
 
 .block-23 ul {
   padding: 0; }
@@ -8951,28 +8949,7 @@ textarea.form-control {
 
 .block-18 .text span {
   display: block; }
-
-.block-27 ul {
-  padding: 0;
-  margin: 0; }
-  .block-27 ul li {
-    display: inline-block;
-    margin-bottom: 4px;
-    font-weight: 400; }
-    .block-27 ul li a, .block-27 ul li span {
-      color: #c49b63;
-      text-align: center;
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 50%;
-      border: 1px solid #674c27; }
-    .block-27 ul li.active a, .block-27 ul li.active span {
-      background: #c49b63;
-      color: #fff;
-      border: 1px solid transparent; }
-
+  
 .contact-section .contact-info p span {
   color: #fff; }
 
